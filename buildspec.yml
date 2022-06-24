@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+        - echo "entered in buildspec phase..."
+        - mvn clean package
+  post_build:
+    commands:
+        - echo "build completed..."
+  artifacts:
+    files:
+        - target/hello-world.war
+    discard-paths: yes                
